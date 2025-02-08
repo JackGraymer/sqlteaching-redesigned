@@ -930,6 +930,11 @@ var load_level = function () {
   if (current_level < levels.length) {
     $("#next-link").attr("href", "#!" + levels[current_level]["short_name"]);
     $("#next-link").show();
+    const element = document.querySelector(".content"); // Get the element
+    element.scrollTo({
+      top: 0, // Scroll to the top
+      behavior: "smooth", // Smooth scrolling
+    });
   } else {
     $("#next-link").hide();
   }
